@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Main from "@/components/UI/Main/Main";
+import Task from "@/components/UI/Tasks/Task";
+import Button from "@/components/UI/Button/Button";
 import LinkButton from "@/components/UI/Button/LinkButton";
 import Background from "@/components/UI/Background/Background";
 import LogoutModal from "@/components/UI/Modals/LogoutModal";
+
+import { useState } from "react";
 
 import {
   calendarIcon,
@@ -24,6 +28,7 @@ import Title from "@/components/UI/Title/Title";
 
 export default function Home() {
   const [openLogoutModal, setOpenLogoutModal] = useState(false);
+
   return (
     <Main>
       <LogoutModal isOpen={openLogoutModal} />
@@ -47,7 +52,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/tasks/"
               >
                 <Image src={documentIcon} alt="Tarefas"></Image>
                 Tarefas
@@ -57,7 +62,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/messages/"
               >
                 <Image src={messageIcon} alt="Mensagens"></Image>
                 Mensagens
@@ -67,7 +72,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/calendar/"
               >
                 <Image src={calendarIcon} alt="Caledário de eventos"></Image>
                 Caledário de eventos
@@ -77,7 +82,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/dashboard/"
               >
                 <Image src={chartIcon} alt="Report & analaytics"></Image>
                 Report & analaytics
@@ -89,7 +94,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/config/"
               >
                 <Image src={configIcon} alt="Configurações"></Image>
                 Configurações
@@ -102,7 +107,7 @@ export default function Home() {
                 href="/system/"
               >
                 <Image src={homeIcon} alt="Inicio"></Image>
-                Inicio
+                Ajuda
               </Link>
             </li>
           </ul>
@@ -116,7 +121,7 @@ export default function Home() {
               <Image src={searchIcon} alt="Procurar" />
               <input
                 type="search"
-                className="w-full text-[12px] bg-transparent outline-none"
+                className="w-full text-xs bg-transparent outline-none"
                 placeholder="Pesquisar.."
               />
             </div>
@@ -133,7 +138,7 @@ export default function Home() {
               </small>
             </div>
 
-            <div className="w-12 h-1w-12 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center">
               <Image
                 className="w-full h-full rounded-full object-cover origin-center"
                 src={userImage}
@@ -143,92 +148,55 @@ export default function Home() {
           </button>
         </header>
 
-        <div className="w-full flex flex-col gap-7">
-          <div className="w-full p-4 bg-card-color rounded-xl">
-            <div className="w-full flex items-center justify-between">
-              <Title value="Registros de terrenos" />
-              <LinkButton
-                href="/system/grounds/add-ground/"
-                value="Registrar terreno"
-                className="bg-[#00FA9C25]"
-              />
+        <div className="w-full flex flex-col gap-32">
+          <div>
+            <Title value="Seja bem vindo de volta!" />
+            <span className="pt-3 text-font-color text-sm">
+              Observe o resumo de atividades desta semana.
+            </span>
+          </div>
+
+          <div className="w-full flex items-start gap-10">
+            <div className="flex-1 flex flex-col gap-6">
+              <Title value="Tarefas por fazer" />
+
+              <div className="flex flex-col items-start gap-4">
+                <Task
+                  title="Passagem de terrenos"
+                  author="Crisvan Van-Dúnem"
+                  date="20.04.2023"
+                  state={true}
+                />
+                <Task
+                  title="Passagem de terrenos"
+                  author="Crisvan Van-Dúnem"
+                  date="20.04.2023"
+                  state={true}
+                />
+                <Task
+                  title="Passagem de terrenos"
+                  author="Crisvan Van-Dúnem"
+                  date="20.04.2023"
+                  state={true}
+                />
+              </div>
             </div>
+            <div className="flex-1 flex flex-col gap-6">
+              <Title value="Tarefas concluídas" />
 
-            <table className="table-auto mt-4 text-left w-full">
-              <thead>
-                <tr>
-                  <th className="text-sm font-semibold py-2">Id</th>
-                  <th className="text-sm font-semibold py-2">Nome</th>
-                  <th className="text-sm font-semibold py-2">
-                    Localização do território
-                  </th>
-                  <th className="text-sm font-semibold py-2">
-                    Dimensões do território
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    VA0347300934LA
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    Garcia Pedro
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    São Paulo
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    50 x 60
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    VA0347300934LA
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    Garcia Pedro
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    São Paulo
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    50 x 60
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    VA0347300934LA
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    Garcia Pedro
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    São Paulo
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    50 x 60
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    VA0347300934LA
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    Garcia Pedro
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    São Paulo
-                  </td>
-                  <td className="py-2 text-font-color text-sm font-light">
-                    50 x 60
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <div className="flex flex-col items-start gap-4">
+                <Task
+                  title="Passagem de terrenos"
+                  author="Crisvan Van-Dúnem"
+                  date="20.04.2023"
+                />
+                <Task
+                  title="Passagem de terrenos"
+                  author="Crisvan Van-Dúnem"
+                  date="20.04.2023"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

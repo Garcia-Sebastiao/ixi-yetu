@@ -41,7 +41,7 @@ export default function Home() {
           <ul className="flex flex-col items-startw-full gap-3">
             <li className="">
               <Link
-                className="text-[12px] flex p-2 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
+                className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
                 href="/system/"
               >
                 <Image src={homeIcon} alt="Inicio"></Image>
@@ -51,7 +51,7 @@ export default function Home() {
 
             <li className="">
               <Link
-                className="text-[12px] flex p-2 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
+                className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
                 href="/system/"
               >
                 <Image src={documentIcon} alt="Tarefas"></Image>
@@ -61,7 +61,7 @@ export default function Home() {
 
             <li className="">
               <Link
-                className="text-[12px] flex p-2 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
+                className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
                 href="/system/"
               >
                 <Image src={messageIcon} alt="Mensagens"></Image>
@@ -71,7 +71,7 @@ export default function Home() {
 
             <li className="">
               <Link
-                className="text-[12px] flex p-2 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
+                className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
                 href="/system/"
               >
                 <Image src={calendarIcon} alt="Caledário de eventos"></Image>
@@ -81,7 +81,7 @@ export default function Home() {
 
             <li className="">
               <Link
-                className="text-[12px] flex p-2 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
+                className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
                 href="/system/"
               >
                 <Image src={chartIcon} alt="Report & analaytics"></Image>
@@ -93,7 +93,7 @@ export default function Home() {
           <ul className="flex flex-col items-startw-full gap-3">
             <li className="">
               <Link
-                className="text-[12px] flex p-2 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
+                className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
                 href="/system/"
               >
                 <Image src={configIcon} alt="Configurações"></Image>
@@ -103,7 +103,7 @@ export default function Home() {
 
             <li className="">
               <Link
-                className="text-[12px] flex p-2 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
+                className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
                 href="/system/"
               >
                 <Image src={homeIcon} alt="Inicio"></Image>
@@ -138,7 +138,7 @@ export default function Home() {
               </small>
             </div>
 
-            <div className="w-10 h-10 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full flex items-center justify-center">
               <Image
                 className="w-full h-full rounded-full object-cover origin-center"
                 src={userImage}

@@ -2,6 +2,7 @@ import logo from "./images/ixiYetu.svg";
 import userImage from "./images/user.png";
 import docIcon from "./images/icons/doc.svg";
 import homeIcon from "./images/icons/Home.svg";
+import timeIcon from "./images/icons/time.svg";
 import background from "./images/background.png";
 import chartIcon from "./images/icons/Chart.svg";
 import searchIcon from "./images/icons/Search.svg";
@@ -21,5 +22,6 @@ export {
   chartIcon,
   docIcon,
   logo,
+  timeIcon,
   userImage,
 };
