@@ -28,7 +28,7 @@ export default function Home() {
 
         <div className="flex w-full flex-col items-center gap-4">
           <div className="flex flex-col items-center gap-[6px]">
-            <h2 className="text-2xl font-bold text-white">
+            <h2 className="text-4xl font-bold text-white">
               Seja bem vindo a IxiYetu.
             </h2>
 
@@ -37,7 +37,7 @@ export default function Home() {
             </p>
           </div>
 
-          <form className="flex w-full max-w-[450px] flex-col items-center gap-y-6" action="">
+          <form className="flex w-full max-w-[450px] flex-col items-center gap-y-6" action="/system">
             <Input placeholder="Nome de usuário" type="text" />
             <Input placeholder="Código de acesso" type="password" />
             <Button value="Entrar" className="bg-[#FF9D0525] w-full text-base py-4" />

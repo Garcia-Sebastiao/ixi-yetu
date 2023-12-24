@@ -71,7 +71,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/calendar"
               >
                 <Image src={calendarIcon} alt="Caledário de eventos"></Image>
                 Caledário de eventos
@@ -81,7 +81,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/analytics/"
               >
                 <Image src={chartIcon} alt="Report & analaytics"></Image>
                 Report & analaytics
@@ -93,7 +93,7 @@ export default function Home() {
             <li className="">
               <Link
                 className="text-xs flex p-3 bg-linksBg rounded-md items-center hover:bg-[#D7F8F140] focus:bg-menuActive transition duration-150 hover:cursor-pointer gap-3"
-                href="/system/"
+                href="/system/settings"
               >
                 <Image src={configIcon} alt="Configurações"></Image>
                 Configurações

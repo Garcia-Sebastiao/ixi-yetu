@@ -10,6 +10,9 @@ import configIcon from "./images/icons/Setting.svg";
 import messageIcon from "./images/icons/Message.svg";
 import documentIcon from "./images/icons/Document.svg";
 import calendarIcon from "./images/icons/Calendar.svg";
+import visibilityIcon from "./images/icons/visibility.svg";
+import imageIcon from "./images/icons/image-icon.svg";
+
 
 export {
   background,
@@ -23,5 +26,7 @@ export {
   docIcon,
   logo,
   timeIcon,
+  visibilityIcon,
   userImage,
+  imageIcon
 };

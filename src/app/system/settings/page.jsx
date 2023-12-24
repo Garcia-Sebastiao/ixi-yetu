@@ -3,7 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import Main from "@/components/UI/Main/Main";
-import Message from "@/components/UI/Messages/Message";
+import Task from "@/components/UI/Tasks/Task";
+import Button from "@/components/UI/Button/Button";
+import LinkButton from "@/components/UI/Button/LinkButton";
 import Background from "@/components/UI/Background/Background";
 import LogoutModal from "@/components/UI/Modals/LogoutModal";
 
@@ -22,6 +24,7 @@ import {
 } from "@/assets";
 import Link from "next/link";
 import Title from "@/components/UI/Title/Title";
+import { UserListRow } from "./components/User/UserTableRow/UserListRow";
 
 export default function Home() {
   const [openLogoutModal, setOpenLogoutModal] = useState(false);
@@ -145,28 +148,28 @@ export default function Home() {
           </button>
         </header>
 
-        <div className="w-full flex flex-col gap-20">
-          <div className="w-full flex flex-col gap-6">
-            <Title value="Novas Mensagens" />
-
-            <div className="flex flex-col gap-3">
-              <Message
-                title="Solicitação de passagem de terreno"
-                description="Crisvan Van-dúnem está solicitando o serviço de passagem de terreno..."
-                time="45min"
-              />
-              <Message
-                title="Solicitação de passagem de terreno"
-                description="Crisvan Van-dúnem está solicitando o serviço de passagem de terreno..."
-                time="45min"
-              />
-              <Message
-                title="Solicitação de passagem de terreno"
-                description="Crisvan Van-dúnem está solicitando o serviço de passagem de terreno..."
-                time="45min"
-              />
-            </div>
+        <div className="w-full flex flex-col gap-8">
+          <div>
+            <Title value="Usuários cadastrados " />
+            <span className="pt-3 text-font-color text-sm">
+              Listamos aqui todos os usuários cadastrados na plataforma.
+            </span>
           </div>
+
+          <ul className="flex flex-col w-full gap-y-4">
+            {Array(6)
+              .fill()
+              .map((_, index) => (
+                <UserListRow
+                  key={index}
+                  order="1"
+                  name="Crisvan dos Santos"
+                  id="478465"
+                  accessCode="23a34b734"
+                  date="20/05/2022"
+                />
+              ))}
+          </ul>
         </div>
       </section>
       <Background />

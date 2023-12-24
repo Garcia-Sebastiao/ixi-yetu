@@ -149,13 +149,6 @@ export default function Home() {
         </header>
 
         <div className="w-full flex flex-col gap-32">
-          <div>
-            <Title value="Seja bem vindo de volta!" />
-            <span className="pt-3 text-font-color text-sm">
-              Observe o resumo de atividades desta semana.
-            </span>
-          </div>
-
           <div className="w-full flex items-start gap-10">
             <div className="flex-1 flex flex-col gap-6">
               <Title value="Tarefas por fazer" />
